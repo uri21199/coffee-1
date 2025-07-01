@@ -22,7 +22,7 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
-    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/whatsapp.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
 </head>
 
@@ -84,12 +84,12 @@
                 <div class="col-sm-4 text-center mb-3">
                     <i class="fa fa-2x fa-phone-alt mb-3 text-primary"></i>
                     <h4 class="font-weight-bold">Teléfono</h4>
-                    <p>+012 345 6789</p>
+                    <p>+5492344401169</p>
                 </div>
                 <div class="col-sm-4 text-center mb-3">
                     <i class="far fa-2x fa-envelope mb-3 text-primary"></i>
                     <h4 class="font-weight-bold">Email</h4>
-                    <p>info@example.com</p>
+                    <p>ilovepalermo4@gmail.com</p>
                 </div>
             </div>
             <div class="row">
@@ -101,32 +101,60 @@
                 <div class="col-md-6 pb-5">
                     <div class="contact-form">
                         <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                            <div class="control-group">
-                                <input type="text" class="form-control bg-transparent p-4" id="name" placeholder="Nombre"
-                                    required="required" data-validation-required-message="Por favor ingresa tu nombre" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <input type="email" class="form-control bg-transparent p-4" id="email" placeholder="Email"
-                                    required="required" data-validation-required-message="Por favor ingresa tu email" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <input type="text" class="form-control bg-transparent p-4" id="subject" placeholder="Asunto"
-                                    required="required" data-validation-required-message="Por favor ingresa un asunto" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <textarea class="form-control bg-transparent py-3 px-4" rows="5" id="message" placeholder="Mensaje"
-                                    required="required"
-                                    data-validation-required-message="Por favor ingresa tu mensaje"></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div>
-                                <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit" id="sendMessageButton">Enviar</button>
-                            </div>
-                        </form>
+                            <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                                <div class="control-group mb-3">
+                                    <label for="name" class="font-weight-bold mb-1">Nombre completo</label>
+                                    <input type="text" class="form-control bg-transparent p-4" id="name" placeholder="Nombre"
+                                        required="required" data-validation-required-message="Por favor ingresá tu nombre" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+
+                                <div class="control-group mb-3">
+                                    <label for="email" class="font-weight-bold mb-1">Email</label>
+                                    <input type="email" class="form-control bg-transparent p-4" id="email" placeholder="Email"
+                                        required="required" data-validation-required-message="Por favor ingresá tu email" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+
+                                <div class="control-group mb-3">
+                                    <label for="telefono" class="font-weight-bold mb-1">Teléfono</label>
+                                    <input type="tel" class="form-control bg-transparent p-4" id="telefono" placeholder="Ej: 5491122334455"
+                                        required="required" data-validation-required-message="Por favor ingresá tu teléfono" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+
+                                <div class="control-group mb-3">
+                                    <label for="cumple" class="font-weight-bold mb-1">Fecha de cumpleaños</label>
+                                    <input type="date" class="form-control bg-transparent p-4" id="cumple"
+                                        required="required" data-validation-required-message="Por favor ingresá tu fecha de cumpleaños" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+
+                                <div class="control-group mb-3">
+                                    <label for="subject" class="font-weight-bold mb-1">Motivo del contacto</label>
+                                    <select class="form-control bg-transparent p-4" id="subject"
+                                        required="required" data-validation-required-message="Por favor seleccioná un motivo">
+                                        <option value="" disabled selected>Seleccioná una opción</option>
+                                        <option value="eventos">Eventos</option>
+                                        <option value="encargos">Tortas por encargo</option>
+                                        <option value="envio">Envío especial</option>
+                                        <option value="consultas">Consultas</option>
+                                    </select>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+
+                                <div class="control-group mb-4">
+                                    <label for="message" class="font-weight-bold mb-1">Mensaje</label>
+                                    <textarea class="form-control bg-transparent py-3 px-4" rows="5" id="message" placeholder="Contanos más..."
+                                        required="required" data-validation-required-message="Por favor ingresá tu mensaje"></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+
+                                <div>
+                                    <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit" id="sendMessageButton">Enviar</button>
+                                </div>
+                            </form>
+
                     </div>
                 </div>
             </div>
@@ -142,7 +170,7 @@
                 <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Get In Touch</h4>
                 <p><i class="fa fa-map-marker-alt mr-2"></i>Malabia 2221, Buenos Aires, Argentina</p>
                 <p><i class="fa fa-phone-alt mr-2"></i>+54 2344 40-1169</p>
-                <p class="m-0"><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+                <p class="m-0"><i class="fa fa-envelope mr-2"></i>ilovepalermo4@gmail.com</p>
             </div>
             <div class="col-lg-4 col-md-6 mb-5">
                 <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">¡Seguinos en redes!</h4>
@@ -190,6 +218,39 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script>
+    (function(){
+        emailjs.init("US39rssjnZ4zgkmdT"); // <-- reemplazá con tu "User ID" de EmailJS
+    })();
+    </script>
+
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        emailjs.send("service_t8muow5", "template_ad0vi42", {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        subject: document.getElementById('subject').value,
+        telefono: document.getElementById('telefono').value,
+        cumple: document.getElementById('cumple').value,
+        message: document.getElementById('message').value
+        }).then(function(response) {
+        console.log("✅ Email enviado:", response.status, response.text);
+        alert("✅ Mensaje enviado con éxito. ¡Gracias por contactarnos!");
+        document.getElementById("contactForm").reset();
+        }, function(error) {
+        alert("❌ Ocurrió un error al enviar el mensaje. Por favor intentá nuevamente.");
+        console.error(error);
+        });
+    });
+    </script>
+
+
 </body>
 
 </html>

@@ -176,23 +176,48 @@
     <!-- Service End -->
 
 
-    <!-- Offer Start -->
-    <div class="offer container-fluid my-5 py-5 text-center position-relative overlay-top overlay-bottom">
-        <div class="container py-5">
-            <h1 class="display-3 text-primary mt-3">Descuentos exclusivos</h1>
-            <!-- <h1 class="text-white mb-3">Sunday Special Offer</h1> -->
-            <h4 class="text-white font-weight-normal mb-4 pb-3">Sumate a nuestra lista de difusión</h4>
-            <form class="form-inline justify-content-center mb-4">
-                <div class="input-group">
-                    <input type="text" class="form-control p-4" placeholder="Tu número" style="height: 60px;">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary font-weight-bold px-4" type="submit">Sumarme</button>
-                    </div>
+<!-- Offer Start -->
+<div class="offer container-fluid my-5 py-5 text-center position-relative overlay-top overlay-bottom">
+    <div class="container py-5">
+        <h1 class="display-3 text-primary mt-3">Descuentos exclusivos</h1>
+        <h4 class="text-white font-weight-normal mb-4 pb-3">Sumate a nuestra lista de difusión</h4>
+        
+        <form class="form-inline justify-content-center mb-4" onsubmit="enviarWhatsApp(event)">
+            <div class="input-group">
+                <input id="numeroUsuario" type="text" class="form-control p-4" 
+                       placeholder="Ej: 5491122334455" 
+                       style="height: 60px;" required>
+                <div class="input-group-append">
+                    <button class="btn btn-primary font-weight-bold px-4" type="submit">Sumarme</button>
                 </div>
-            </form>
-        </div>
+            </div>
+        </form>
     </div>
-    <!-- Offer End -->
+</div>
+<!-- Offer End -->
+
+<script>
+  function enviarWhatsApp(e) {
+    e.preventDefault();
+
+    const numeroUsuario = document.getElementById("numeroUsuario").value.trim();
+
+    if (!numeroUsuario) {
+      alert("Por favor ingresá tu número antes de continuar.");
+      return;
+    }
+
+    const numeroDestino = "5491166205844"; // ← Reemplazar por TU número
+    const mensaje = 
+      `¡Nuevo interesado en la lista de difusión! \n` +
+      `Hola, quiero sumarme a la lista.\n` +
+      `Mi número es: ${numeroUsuario}`;
+
+    const url = `https://wa.me/${numeroDestino}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, "_blank");
+  }
+</script>
+
 
 
 
@@ -257,7 +282,7 @@
                 <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Contact</h4>
                 <p><i class="fa fa-map-marker-alt mr-2"></i>Malabia 2221, Buenos Aires, Argentina</p>
                 <p><i class="fa fa-phone-alt mr-2"></i>+54 2344 40-1169</p>
-                <p class="m-0"><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+                <p class="m-0"><i class="fa fa-envelope mr-2"></i>ilovepalermo4@gmail.com</p>
             </div>
             <div class="col-lg-4 col-md-6 mb-5">
                 <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">¡Seguinos en redes!</h4>
