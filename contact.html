@@ -139,6 +139,8 @@
                                         <option value="encargos">Tortas por encargo</option>
                                         <option value="envio">Envío especial</option>
                                         <option value="consultas">Consultas</option>
+                                        <option value="franquicias">Franquicias</option>
+                                        <option value="trabaja">Trabajá con nosotros</option>
                                     </select>
                                     <p class="help-block text-danger"></p>
                                 </div>
@@ -187,6 +189,14 @@
                     <h6 class="text-white text-uppercase">Lunes - Domingo</h6>
                     <p>8.00 - 20.00</p>
                 </div>
+
+                <!-- Botón Trabajá con nosotros -->
+                <div class="mt-4">
+                    <a href="https://wa.me/5492344401169?text=👋%20Hola!%20Quisiera%20postularme%20para%20trabajar%20en%20la%20cafetería.%20¿Podrían%20contarme%20cómo%20enviar%20mi%20CV%20o%20más%20información?%20🙌"
+                    class="btn btn-primary btn-block font-weight-bold py-2 w-50">
+                        📩 Trabajá con nosotros
+                    </a>
+                </div>
             </div>
  
         </div>
@@ -224,7 +234,7 @@
     </script>
     <script>
     (function(){
-        emailjs.init("US39rssjnZ4zgkmdT"); // <-- reemplazá con tu "User ID" de EmailJS
+        emailjs.init("A3YgZSA2A2da5j2An"); // <-- reemplazá con tu "User ID" de EmailJS
     })();
     </script>
 
@@ -232,7 +242,7 @@
     document.getElementById('contactForm').addEventListener('submit', function(e) {
         e.preventDefault();
 
-        emailjs.send("service_t8muow5", "template_ad0vi42", {
+        emailjs.send("A3YgZSA2A2da5j2An", "template_sp9w2uo", {
         name: document.getElementById('name').value,
         email: document.getElementById('email').value,
         subject: document.getElementById('subject').value,
