@@ -68,101 +68,27 @@
     <!-- Page Header End -->
 
 
-    <!-- Contact Start -->
-    <div class="container-fluid pt-5">
-        <div class="container">
-            <div class="section-title">
-                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Contactanos</h4>
-                <!-- <h1 class="display-4">Feel Free To Contact</h1> -->
-            </div>
-            <div class="row px-3 pb-2">
-                <div class="col-sm-4 text-center mb-3">
-                    <i class="fa fa-2x fa-map-marker-alt mb-3 text-primary"></i>
-                    <h4 class="font-weight-bold">Dirección</h4>
-                    <p>Malabia 2221, Buenos Aires, Argentina</p>
-                </div>
-                <div class="col-sm-4 text-center mb-3">
-                    <i class="fa fa-2x fa-phone-alt mb-3 text-primary"></i>
-                    <h4 class="font-weight-bold">Teléfono</h4>
-                    <p>+5492344401169</p>
-                </div>
-                <div class="col-sm-4 text-center mb-3">
-                    <i class="far fa-2x fa-envelope mb-3 text-primary"></i>
-                    <h4 class="font-weight-bold">Email</h4>
-                    <p>ilovepalermo4@gmail.com</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 pb-5">
-                    <iframe style="width: 100%; height: 443px;"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.6852257722003!2d-58.4208255!3d-34.5868305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5004b937ac3%3A0x778f11ac1b936675!2sI%20Love%20Palermo%20Specialty%20Coffee!5e0!3m2!1ses!2sar!4v1748802816907!5m2!1ses!2sar"
-                        frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                </div>
-                <div class="col-md-6 pb-5">
-                    <div class="contact-form">
-                        <div id="success"></div>
-                            <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                                <div class="control-group mb-3">
-                                    <label for="name" class="font-weight-bold mb-1">Nombre completo</label>
-                                    <input type="text" class="form-control bg-transparent p-4" id="name" placeholder="Nombre"
-                                        required="required" data-validation-required-message="Por favor ingresá tu nombre" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
+<div class="container pt-5">
+    <div class="section-title">
+        <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Trabajá con nosotros</h4>
+        <h1 class="display-4">Sumate al equipo</h1>
+    </div>
 
-                                <div class="control-group mb-3">
-                                    <label for="email" class="font-weight-bold mb-1">Email</label>
-                                    <input type="email" class="form-control bg-transparent p-4" id="email" placeholder="Email"
-                                        required="required" data-validation-required-message="Por favor ingresá tu email" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-
-                                <div class="control-group mb-3">
-                                    <label for="telefono" class="font-weight-bold mb-1">Teléfono</label>
-                                    <input type="tel" class="form-control bg-transparent p-4" id="telefono" placeholder="Ej: 5491122334455"
-                                        required="required" data-validation-required-message="Por favor ingresá tu teléfono" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-
-                                <div class="control-group mb-3">
-                                    <label for="cumple" class="font-weight-bold mb-1">Fecha de cumpleaños</label>
-                                    <input type="date" class="form-control bg-transparent p-4" id="cumple"
-                                        required="required" data-validation-required-message="Por favor ingresá tu fecha de cumpleaños" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-
-                                <div class="control-group mb-3">
-                                    <label for="subject" class="font-weight-bold mb-1">Motivo del contacto</label>
-                                    <select class="form-control bg-transparent p-4" id="subject"
-                                        required="required" data-validation-required-message="Por favor seleccioná un motivo">
-                                        <option value="" disabled selected>Seleccioná una opción</option>
-                                        <option value="eventos">Eventos</option>
-                                        <option value="encargos">Tortas por encargo</option>
-                                        <option value="envio">Envío especial</option>
-                                        <option value="consultas">Consultas</option>
-                                        <option value="franquicias">Franquicias</option>
-                                        <option value="trabaja">Trabajá con nosotros</option>
-                                    </select>
-                                    <p class="help-block text-danger"></p>
-                                </div>
-
-                                <div class="control-group mb-4">
-                                    <label for="message" class="font-weight-bold mb-1">Mensaje</label>
-                                    <textarea class="form-control bg-transparent py-3 px-4" rows="5" id="message" placeholder="Contanos más..."
-                                        required="required" data-validation-required-message="Por favor ingresá tu mensaje"></textarea>
-                                    <p class="help-block text-danger"></p>
-                                </div>
-
-                                <div>
-                                    <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit" id="sendMessageButton">Enviar</button>
-                                </div>
-                            </form>
-
-                    </div>
-                </div>
-            </div>
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <form action="enviar-cv.php" method="POST" enctype="multipart/form-data">
+                <input type="text" name="nombre" placeholder="Nombre y apellido" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="telefono" placeholder="Teléfono" required>
+                <input type="text" name="localidad" placeholder="Localidad" required>
+                <input type="date" name="nacimiento" required>
+                <input type="file" name="cv" accept=".pdf" required>
+                <button type="submit">Enviar</button>
+            </form>
         </div>
     </div>
-    <!-- Contact End -->
+</div>
+
 
 
     <!-- Footer Start -->

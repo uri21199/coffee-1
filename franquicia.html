@@ -57,106 +57,64 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header mb-5 position-relative overlay-bottom">
         <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
-            <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Productos</h1>
+            <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Contacto</h1>
             <div class="d-inline-flex mb-lg-5">
-                <p class="m-0 text-white"><a class="text-white" href="">Inicio</a></p>
+                <p class="m-0 text-white"><a class="text-white" href="index.html">Inicio</a></p>
                 <p class="m-0 text-white px-2">/</p>
-                <p class="m-0 text-white">Productos</p>
+                <p class="m-0 text-white">Contacto</p>
             </div>
         </div>
     </div>
     <!-- Page Header End -->
 
 
-    <!-- Service Start -->
-    <div class="container-fluid pt-5">
-        <div class="container">
-            <div class="section-title">
-                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Nuestros productos</h4>
-                <h1 class="display-4">Pastelería</h1>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 mb-5">
-                    <div class="row align-items-center">
-                        <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="img/bomb_cake.PNG" alt="" style="height: 200px; width: 200px; object-fit: cover;">
-                        </div>
-                        <div class="col-sm-7">
-                            <h4><i class="#"></i>Bomb Cake</h4>
-                            <p class="m-0">Base de brownie, relleno de chocotorta, Oreo, Kinder, dulce de leche y crema. Una bomba irresistible.</p>
-                        </div>
+    <div class="container pt-5">
+        <div class="section-title">
+            <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Franquicias</h4>
+            <h1 class="display-4">¡Abrí tu propia I Love Palermo!</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <form id="franquiciaForm" action="enviar-franquicia.php" method="POST">
+                    <div class="control-group mb-3">
+                        <label for="nombre" class="font-weight-bold mb-1">Nombre y apellido</label>
+                        <input type="text" class="form-control bg-transparent p-4" id="nombre" name="nombre" required>
                     </div>
-                </div>
-                <div class="col-lg-6 mb-5">
-                    <div class="row align-items-center">
-                        <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="img/carrot_cake.png" alt=""  style="height: 200px; width: 200px; object-fit: cover;">
-                        </div>
-                        <div class="col-sm-7">
-                            <h4><i class="#"></i>Carrot Cake</h4>
-                            <p class="m-0">Torta de zanahoria con nueces, especias suaves y cobertura de cream cheese.</p>
-                        </div>
+
+                    <div class="control-group mb-3">
+                        <label for="telefono" class="font-weight-bold mb-1">Teléfono</label>
+                        <input type="tel" class="form-control bg-transparent p-4" id="telefono" name="telefono" required>
                     </div>
-                </div>
-                <div class="col-lg-6 mb-5">
-                    <div class="row align-items-center">
-                        <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="img/chocotorta_franui.png" alt=""  style="height: 200px; width: 200px; object-fit: cover;">
-                        </div>
-                        <div class="col-sm-7">
-                            <h4><i class="#"></i>Chocotorta FRANUI</h4>
-                            <p class="m-0">La clásica de toda la vida, con un plus de Franui arriba. Cremosa, fresca y golosa.</p>
-                        </div>
+
+                    <div class="control-group mb-3">
+                        <label for="email" class="font-weight-bold mb-1">Email</label>
+                        <input type="email" class="form-control bg-transparent p-4" id="email" name="email" required>
                     </div>
-                </div>
-                <div class="col-lg-6 mb-5">
-                    <div class="row align-items-center">
-                        <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="img/matilda.jpg" alt=""  style="height: 200px; width: 200px; object-fit: cover;">
-                        </div>
-                        <div class="col-sm-7">
-                            <h4><i class="#"></i>Matilda</h4>
-                            <p class="m-0">Súper húmeda y chocolatosa. Con mucho cacao, ganache y espíritu goloso. La favorita de todos.</p>
-                        </div>
+
+                    <div class="control-group mb-3">
+                        <label for="nacimiento" class="font-weight-bold mb-1">Fecha de nacimiento</label>
+                        <input type="date" class="form-control bg-transparent p-4" id="nacimiento" name="nacimiento" required>
                     </div>
-                </div>
-                <div class="col-lg-6 mb-5">
-                    <div class="row align-items-center">
-                        <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="img/tentacion_franui.jpg" alt=""  style="height: 200px; width: 200px; object-fit: cover;">
-                        </div>
-                        <div class="col-sm-7">
-                            <h4><i class="#"></i>Tentación FRANUI</h4>
-                            <p class="m-0">Masa crujiente de vainilla, reducción de frutos rojos, doble ganache (blanco y negro) y Franouilles. Dulce, fresca y gourmet.</p>
-                        </div>
+
+                    <div class="control-group mb-3">
+                        <label for="negocio" class="font-weight-bold mb-1">¿Tuviste algún negocio anteriormente?</label>
+                        <input type="text" class="form-control bg-transparent p-4" id="negocio" name="negocio" required>
                     </div>
-                </div>
-                <div class="col-lg-6 mb-5">
-                    <div class="row align-items-center">
-                        <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="img/torta_oreo.PNG" alt=""  style="height: 200px; width: 200px; object-fit: cover;">
-                        </div>
-                        <div class="col-sm-7">
-                            <h4><i class="#"></i>Torta Oreo</h4>
-                            <p class="m-0">Rellena de chocotorta bien cremosa con galletitas Oreo. Crocante, dulce y nostálgica.</p>
-                        </div>
+
+                    <div class="control-group mb-4">
+                        <label for="horario" class="font-weight-bold mb-1">¿En qué horario preferís ser contactado?</label>
+                        <input type="text" class="form-control bg-transparent p-4" id="horario" name="horario" required>
                     </div>
-                </div>
-                <div class="col-lg-6 mb-5">
-                    <div class="row align-items-center">
-                        <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="img/red_velvet.PNG" alt=""  style="height: 200px; width: 200px; object-fit: cover;">
-                        </div>
-                        <div class="col-sm-7">
-                            <h4><i class="#"></i>Red Velvet</h4>
-                            <p class="m-0">Clásica, húmeda y esponjosa, con suaves capas rojo intenso y un cremoso frosting de queso.</p>
-                        </div>
+
+                    <div>
+                        <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit">Enviar solicitud</button>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
-    <!-- Service End -->
+
 
 
     <!-- Footer Start -->
@@ -191,13 +149,6 @@
                         📩 Trabajá con nosotros
                     </a>
                 </div>
-
-                <div class="mt-4">
-                    <a href="work.html"
-                    class="btn btn-primary btn-block font-weight-bold py-2 w-50">
-                        📩 Franquicias
-                    </a>
-                </div>
             </div>
  
         </div>
@@ -229,6 +180,8 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+
 </body>
 
 </html>
