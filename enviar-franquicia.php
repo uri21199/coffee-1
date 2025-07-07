@@ -1,15 +1,19 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 // Configuración
-$to = "lautarouab@gmail.com"; // Reemplazar por el mail real
+$to = "lautarouab@gmail.com";
 $subject = "📩 Nueva solicitud de franquicia";
 
 // Datos del formulario
-$nombre = $_POST['nombre'];
-$telefono = $_POST['telefono'];
-$email = $_POST['email'];
-$nacimiento = $_POST['nacimiento'];
-$negocio = $_POST['negocio'];
-$horario = $_POST['horario'];
+$nombre = $_POST['nombre'] ?? '';
+$telefono = $_POST['telefono'] ?? '';
+$email = $_POST['email'] ?? '';
+$nacimiento = $_POST['nacimiento'] ?? '';
+$negocio = $_POST['negocio'] ?? '';
+$horario = $_POST['horario'] ?? '';
 
 // Armado del mensaje
 $message = "📦 Nueva solicitud de franquicia\n\n";
@@ -24,11 +28,11 @@ $message .= "Horario de contacto preferido: $horario\n";
 $headers = "From: $nombre <$email>\r\n";
 $headers .= "Reply-To: $email\r\n";
 
-// Envío
+// Envío y redirección
 if (mail($to, $subject, $message, $headers)) {
-    echo "<script>
-            alert('✅ Tu solicitud fue enviada correctamente. ¡Gracias!');
-            window.history.back();
-        </script>";
+    header("Location: gracias.html");
+    exit;
 } else {
-    echo "<script>
+    echo "❌ Error al enviar el mensaje.";
+}
+?>

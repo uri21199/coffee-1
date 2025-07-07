@@ -48,8 +48,8 @@ $message .= "--$boundary--";
 
 // Enviar
 if (mail($to, $subject, $message, $headers)) {
-    echo "✅ Tu postulación fue enviada correctamente.";
+    header("Location: trabaja.html?enviado=1");
+    exit;
 } else {
     echo "❌ Error al enviar el mensaje. Intentá nuevamente.";
 }
-?>
