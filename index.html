@@ -196,42 +196,13 @@
     <div class="container py-5">
         <h1 class="display-3 text-primary mt-3">Descuentos exclusivos</h1>
         <h4 class="text-white font-weight-normal mb-4 pb-3">Sumate a nuestra lista de difusión</h4>
-        
-        <form class="form-inline justify-content-center mb-4" onsubmit="enviarWhatsApp(event)">
-            <div class="input-group">
-                <input id="numeroUsuario" type="text" class="form-control p-4" 
-                       placeholder="Ej: 5491122334455" 
-                       style="height: 60px;" required>
-                <div class="input-group-append">
-                    <button class="btn btn-primary font-weight-bold px-4" type="submit">Sumarme</button>
-                </div>
-            </div>
-        </form>
+
+        <a href="https://wa.me/5492344401169" target="_blank" class="btn btn-primary font-weight-bold px-4 py-3">
+            Sumarme por WhatsApp
+        </a>
     </div>
 </div>
 <!-- Offer End -->
-
-<script>
-  function enviarWhatsApp(e) {
-    e.preventDefault();
-
-    const numeroUsuario = document.getElementById("numeroUsuario").value.trim();
-
-    if (!numeroUsuario) {
-      alert("Por favor ingresá tu número antes de continuar.");
-      return;
-    }
-
-    const numeroDestino = "5492344401169‬"; // ← Reemplazar por TU número
-    const mensaje = 
-      `¡Nuevo interesado en la lista de difusión! \n` +
-      `Hola, quiero sumarme a la lista.\n` +
-      `Mi número es: ${numeroUsuario}`;
-
-    const url = `https://wa.me/${numeroDestino}?text=${encodeURIComponent(mensaje)}`;
-    window.open(url, "_blank");
-  }
-</script>
 
 
 

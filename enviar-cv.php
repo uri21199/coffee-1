@@ -1,5 +1,5 @@
 <?php
-$to = "lautarouab@gmail.com";
+$to = "ilovepalermo4@gmail.com";
 $subject = "📩 Nueva postulación desde la web - Trabajá con nosotros";
 
 // Datos del formulario
@@ -48,8 +48,14 @@ $message .= "--$boundary--";
 
 // Enviar
 if (mail($to, $subject, $message, $headers)) {
-    header("Location: trabaja.html?enviado=1");
+    echo "<script>
+        window.location.href = 'work.html?enviado=1';
+    </script>";
     exit;
 } else {
-    echo "❌ Error al enviar el mensaje. Intentá nuevamente.";
+    echo "<script>
+        alert('❌ Error al enviar el mensaje.');
+        window.history.back();
+    </script>";
 }
+

@@ -4,7 +4,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 // Configuración
-$to = "lautarouab@gmail.com";
+$to = "ilovepalermo4@gmail.com";
 $subject = "📩 Nueva solicitud de franquicia";
 
 // Datos del formulario
